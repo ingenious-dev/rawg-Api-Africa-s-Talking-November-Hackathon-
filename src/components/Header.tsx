@@ -29,6 +29,7 @@ function Header(props: Props) {
     addScrollableSelector('.Items');
     disablePageScroll();
   };
+  const navigateToLogin = () => navigate('/login');
 
   return (
     <Headroom upTolerance={1}>
@@ -44,6 +45,13 @@ function Header(props: Props) {
           <RiReactjsLine /> A'sTalking
         </Button>
         <SearchBar />
+        <Button
+          className="Cart"
+          handleClick={navigateToLogin}
+        >
+          {/* <RiShoppingBag2Line /> */}
+          Login
+        </Button>
         <Button
           className="Cart"
           handleClick={openCart}
